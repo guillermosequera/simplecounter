@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card';
+import CardSlot from './components/CardSlot';
 
-function App() {
+function App(props) {     /* aqui le pasamos los props a nuestro componente 'App' */
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="hour"><h1>{props.hour}</h1></div>
+      <div className="minute"><h1>{props.minute}</h1></div>
+      <div className="second"><h1>{props.second}</h1></div> 
+     {/* aqui dejamos impresos los props para mostrarlos en nuestro html  */}
     </div>
   );
 }
